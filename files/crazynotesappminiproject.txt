@@ -1,0 +1,1 @@
+now after this i think i'll implement the delete option as well for the notes to make it CRUD application and push this project to gitHub hahahahhah
