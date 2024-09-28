@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-full h-full bg-zinc-900 text-white p-10">
+      <h1 class="text-4xl inline-block mb-2 mt-10">Edit Users</h1>
+      <form method="post" action="/update/<%= user._id %>" class="flex gap-5 flex-wrap">
+        <input
+          type="text"
+          class="px-5 py-3 border-2 border-zinc-600 rounded-md outline-none bg-transparent mt-2"
+          name="name"
+          placeholder="name"
+          value="<%= user.name %>"
+        />
+        <input
+          type="text"
+          class="px-5 py-3 border-2 border-zinc-600 rounded-md outline-none bg-transparent mt-2"
+          name="email"
+          placeholder="email" value="<%= user.email %>"
+        />
+        <input
+          type="text"
+          class="px-5 py-3 border-2 border-zinc-600 rounded-md outline-none bg-transparent mt-2"
+          name="image"
+          placeholder="imageURL" value="<%= user.image %>"
+        />
+        <input
+          type="submit"
+          value="Edit User"
+          class="bg-orange-300 rounded-md p-3 hover:bg-orange-200 mt-5 text-black"
+        />
+      </form>
+    </div>
+  </body>
+</html>
